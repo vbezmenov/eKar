@@ -1,0 +1,20 @@
+<databaseChangeLog
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+	<changeSet id="1" author="victor.b">
+		<createTable tableName="track_info">
+			<column name="id" type="BIGINT" autoIncrement="true">
+				<constraints primaryKey="true" primaryKeyName="PK_USER"/>
+			</column>
+			<column name="producer_cur_cnt" type="INTEGER" />
+			<column name="producer_cnt_inc_by" type="INTEGER" />
+			<column name="consumer_cur_cnt" type="INTEGER" />
+			<column name="consumer_cnt_inc_by" type="INTEGER" />
+			<column name="created_at" type="TIMESTAMP" defaultValueComputed="CURRENT_TIMESTAMP" />
+		</createTable>
+	</changeSet>
+
+</databaseChangeLog>
