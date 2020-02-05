@@ -29,10 +29,10 @@ public class MainController {
 
     @ResponseStatus(HttpStatus.CREATED)
     @PutMapping("/updateState")
-    void updateState(@ApiParam(value = "Int value in range [1-255] - increases count of producers by provided value", example = "10")
+    void updateState(@ApiParam(value = "Int value in range [0-255] - increases count of producers by provided value", example = "10")
                      @RequestParam("producerCntIncBy")
                      @Min(0) @Max(255) Integer producerCntIncBy,
-                     @ApiParam(value = "Int value in range [0-100] - increases count of consumers by provided value", example = "10")
+                     @ApiParam(value = "Int value in range [0-255] - increases count of consumers by provided value", example = "10")
                      @RequestParam("consumerCntIncBy")
                      @Min(0) @Max(255) Integer consumerCntIncBy) {
 
